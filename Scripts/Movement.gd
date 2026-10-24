@@ -13,19 +13,22 @@ const WALL_GRACE_PERIOD:int = 7
 
 const FLOOR_SNAP:float = 10.0
 
-enum States {IDLE, RUN, CROUCH, SLIDE, WALLSLIDE, FALL}
+enum States {IDLE, RUN, CROUCH, SLIDE, WALLSLIDE, FALL, JUMP}
 
 var baseGravityMult:float = 1
 var gravityMult:float = 1
 
 var wasOnWall = [false, 7, 1]
 var holdingWall:bool = false
+var floorDirection:int = 1
+
+var playerState:States
 
 func _physics_process(delta: float) -> void:
 	# Add the gravity.
 	var direction := Input.get_axis("Left", "Right")
-	var state = movementState(direction)
-		
+	playerState = movementState(direction)
+	print(get_floor_normal())
 	
 	if not is_on_floor():
 		rotation = 0
@@ -34,7 +37,7 @@ func _physics_process(delta: float) -> void:
 		else: wasOnWall[0] = false 
 		
 		
-		if state == States.WALLSLIDE: 
+		if playerState == States.WALLSLIDE: 
 			wasOnWall = [true, WALL_GRACE_PERIOD, get_wall_normal().x]
 			if velocity.y < 0: movePlayer(velocity.x, 0)
 			else: 
@@ -44,7 +47,7 @@ func _physics_process(delta: float) -> void:
 		
 		if Input.is_action_just_pressed("Jump") && wasOnWall[0]: 
 			movePlayer(WALLJUMP_SPEED.x * wasOnWall[2], WALLJUMP_SPEED.y, 1.0)
-			toggleSound("Jump")
+			playSound("Jump")
 		
 		if direction:
 			movePlayer(MAX_SPEED * direction)
@@ -53,13 +56,16 @@ func _physics_process(delta: float) -> void:
 		else: animated_sprite_2d.play("Jump")
 
 	else:
-		var floorAngle = get_floor_angle()
-		rotation = -floorAngle
-		print(floorAngle)
 		
-		floor_snap_length = FLOOR_SNAP
+		if get_floor_angle():
+			floorDirection = (get_floor_normal().x / abs(get_floor_normal().x))
+			rotation = floorDirection * get_floor_angle()
+			
 		
-		if state == States.RUN:
+		
+		
+		
+		if playerState == States.RUN:
 			movePlayer(MAX_SPEED * direction)
 			animated_sprite_2d.transform.x = Vector2(direction, 0)
 			animated_sprite_2d.play("Run")
@@ -70,7 +76,9 @@ func _physics_process(delta: float) -> void:
 		if Input.is_action_just_pressed("Jump"):
 			velocity.y = JUMP_VELOCITY
 			floor_snap_length = 0
-			toggleSound("Jump")
+			playSound("Jump")
+	
+	playPlayerSounds()
 	apply_floor_snap()
 	move_and_slide()
 
@@ -80,9 +88,9 @@ func movePlayer(xSpeed:float, ySpeed:float = velocity.y, acceleration = ACCELERA
 	else: speed = Vector2(move_toward(velocity.x, xSpeed, MAX_SPEED * acceleration), move_toward(velocity.y, ySpeed, MAX_SPEED * acceleration))
 	
 	velocity = speed
-func toggleSound(name :String, state:bool = true):
+func playSound(name :String):
 	var sound:AudioStreamPlayer2D = sfx.find_child(name)
-	sound.playing = state
+	if !sound.playing: sound.play()
 
 func movementState(direction:int):
 	if is_on_floor():
@@ -92,3 +100,7 @@ func movementState(direction:int):
 	else:
 		if is_on_wall_only() && -get_wall_normal().x == direction: return States.WALLSLIDE
 		else: return States.FALL
+
+func playPlayerSounds():
+	if playerState == States.RUN:playSound("Run")
+	if playerState == States.SLIDE || playerState == States.WALLSLIDE: playSound("Slide")
