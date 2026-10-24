@@ -1,0 +1,57 @@
+[gd_scene format=3 uid="uid://b7our2eti7tge"]
+
+[ext_resource type="PackedScene" uid="uid://btn2u1bkt6apk" path="res://Scenes/player.tscn" id="1_q2fht"]
+[ext_resource type="Texture2D" uid="uid://bvemslehvwrdm" path="res://Assets/Art/RedKing.png" id="2_ikcpc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_di8lm"]
+size = Vector2(216, 683.5)
+
+[node name="Main Level" type="Node" unique_id=1949800986]
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=621445103]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=1736532818]
+polygon = PackedVector2Array(447, -1, 28, -1, 28, -290, -168, -290, -169, 177, 4, 181, 464, 181, 1060, 4, 1825, 151, 1053, -164, 649.22437, 0.64941406)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=111184139]
+position = Vector2(311, -527.25)
+shape = SubResource("RectangleShape2D_di8lm")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=238904151]
+position = Vector2(-80, -250)
+shape = SubResource("RectangleShape2D_di8lm")
+
+[node name="RedKings" type="Node2D" parent="StaticBody2D" unique_id=894584586]
+
+[node name="RedKing3" type="Sprite2D" parent="StaticBody2D/RedKings" unique_id=1047488457]
+position = Vector2(-85, -244)
+scale = Vector2(10.276318, 12.421875)
+texture = ExtResource("2_ikcpc")
+
+[node name="RedKing4" type="Sprite2D" parent="StaticBody2D/RedKings" unique_id=1305027494]
+position = Vector2(306.00006, -521)
+scale = Vector2(10.276318, 12.421875)
+texture = ExtResource("2_ikcpc")
+
+[node name="RedKing2" type="Sprite2D" parent="StaticBody2D/RedKings" unique_id=1673488698]
+position = Vector2(791.00006, 57.99997)
+rotation = 1.1693708
+scale = Vector2(10.403464, 12.421875)
+texture = ExtResource("2_ikcpc")
+
+[node name="RedKing5" type="Sprite2D" parent="StaticBody2D/RedKings" unique_id=1880537203]
+position = Vector2(1327, 71.99997)
+rotation = -1.1868238
+scale = Vector2(10.403464, 12.421875)
+texture = ExtResource("2_ikcpc")
+
+[node name="RedKing" type="Sprite2D" parent="StaticBody2D/RedKings" unique_id=1719629476]
+position = Vector2(322, 102)
+rotation = 1.5707964
+scale = Vector2(10.276318, 12.421875)
+texture = ExtResource("2_ikcpc")
+
+[node name="Player" parent="." unique_id=547901697 instance=ExtResource("1_q2fht")]
+position = Vector2(199, -155)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=633195040]
