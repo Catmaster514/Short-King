@@ -1,0 +1,139 @@
+[gd_scene format=3 uid="uid://btn2u1bkt6apk"]
+
+[ext_resource type="Script" uid="uid://cagnp7nd0n0nn" path="res://Scripts/Movement.gd" id="1_v0iea"]
+[ext_resource type="Texture2D" uid="uid://bu2dc6lvubedr" path="res://Assets/Art/Temporary/WizardIdle.png" id="2_vgqql"]
+[ext_resource type="Texture2D" uid="uid://c0nii6gukeadq" path="res://Assets/Art/Temporary/WIzard Jump.png" id="3_fkybt"]
+[ext_resource type="Texture2D" uid="uid://bl7f8kgsorbyn" path="res://Assets/Art/Temporary/WizardRun.png" id="4_x3wgy"]
+[ext_resource type="AudioStream" uid="uid://b07yds8g18hoy" path="res://Assets/Sounds/slide.wav" id="5_fkybt"]
+[ext_resource type="AudioStream" uid="uid://den3aqjib2jdf" path="res://Assets/Sounds/run.wav" id="6_3smsa"]
+[ext_resource type="AudioStream" uid="uid://c00tai3lltvpd" path="res://Assets/Sounds/jump.wav" id="7_3smsa"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_8erm5"]
+radius = 7.5
+height = 33.0
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3smsa"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(0, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_8erm5"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(32, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f1ek2"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(64, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_tx1dd"]
+atlas = ExtResource("2_vgqql")
+region = Rect2(96, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gymyn"]
+atlas = ExtResource("3_fkybt")
+region = Rect2(128, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pu2lt"]
+atlas = ExtResource("3_fkybt")
+region = Rect2(160, 0, 32, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ukyrk"]
+atlas = ExtResource("4_x3wgy")
+region = Rect2(0, 0, 33, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7dp3o"]
+atlas = ExtResource("4_x3wgy")
+region = Rect2(33, 0, 33, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_h4iuc"]
+atlas = ExtResource("4_x3wgy")
+region = Rect2(66, 0, 33, 48)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_fd4e3"]
+atlas = ExtResource("4_x3wgy")
+region = Rect2(99, 0, 33, 48)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_v0iea"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3smsa")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_8erm5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f1ek2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_tx1dd")
+}],
+"loop": 1,
+"name": &"Idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gymyn")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pu2lt")
+}],
+"loop": 1,
+"name": &"Jump",
+"speed": 11.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ukyrk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7dp3o")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_h4iuc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_fd4e3")
+}],
+"loop": 1,
+"name": &"Run",
+"speed": 5.0
+}]
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_8erm5"]
+
+[node name="Player" type="CharacterBody2D" unique_id=547901697]
+floor_max_angle = 1.0471976
+floor_snap_length = 10.5
+script = ExtResource("1_v0iea")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1382565533]
+shape = SubResource("CapsuleShape2D_8erm5")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="." unique_id=795563845]
+position = Vector2(-1, -1)
+sprite_frames = SubResource("SpriteFrames_v0iea")
+animation = &"Run"
+autoplay = "Idle"
+
+[node name="SFX" type="Node2D" parent="." unique_id=106973110]
+
+[node name="Slide" type="AudioStreamPlayer2D" parent="SFX" unique_id=1016309733]
+stream = ExtResource("5_fkybt")
+volume_db = -8.91
+pitch_scale = 0.9
+
+[node name="Run" type="AudioStreamPlayer2D" parent="SFX" unique_id=2011564446]
+stream = ExtResource("6_3smsa")
+volume_db = -11.085
+pitch_scale = 1.22
+
+[node name="Jump" type="AudioStreamPlayer2D" parent="SFX" unique_id=253496821]
+stream = ExtResource("7_3smsa")
+volume_db = 9.336
+pitch_scale = 0.9
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=320654625]
+position = Vector2(0, -0.24374908)
+scale = Vector2(20, 33.512505)
+texture = SubResource("PlaceholderTexture2D_8erm5")
