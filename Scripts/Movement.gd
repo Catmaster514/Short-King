@@ -102,6 +102,7 @@ func _physics_process(delta: float) -> void:
 					direction = velocity.x / abs(velocity.x)
 					movePlayer(0, velocity.y, SLIDE_SLOW_MODIFIER, 1)
 					playerState = States.SLIDE
+					animated_sprite_2d.play("Slide")
 				else: animated_sprite_2d.play("Crouch")
 				changeHitBox(CROUCH_HEIGHT)
 			States.RUN:
