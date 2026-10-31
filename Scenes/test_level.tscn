@@ -1,0 +1,999 @@
+[gd_scene format=3 uid="uid://dkc5c5g0agfp7"]
+
+[ext_resource type="PackedScene" uid="uid://btn2u1bkt6apk" path="res://Scenes/player.tscn" id="1_dtjkg"]
+[ext_resource type="Texture2D" uid="uid://dxb2jh8w1eiv3" path="res://Assets/Art/Green Book.png" id="2_eglq2"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1c2mv"]
+size = Vector2(71.25, 1327)
+
+[sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_di8lm"]
+
+[node name="Test level" type="Node" unique_id=1218631650]
+
+[node name="Player" parent="." unique_id=547901697 instance=ExtResource("1_dtjkg")]
+position = Vector2(5155, -33)
+rotation = 1.5707964
+scale = Vector2(-1, 1)
+
+[node name="Camera2D" type="Camera2D" parent="Player" unique_id=601290605]
+zoom = Vector2(1.745, 1.745)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1164544002]
+position = Vector2(-4, 2)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=201880106]
+polygon = PackedVector2Array(929, 42, 929, -92, 1039, -92, 1039, 231, -408, 226, -421, 82, -825, -318, -1678, -36, -1584, -843, -1585, -174, -1541, -192, -825, -488, -754, -488, -754, -323, -422, -323, -354, -323, -354, 13, 80, 13, 211, 97, 367.11902, 97.00006, 525, 97, 653, 40, 791, 125)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=985643096]
+position = Vector2(-254.625, -717.5)
+shape = SubResource("RectangleShape2D_1c2mv")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=291224487]
+position = Vector2(-116, -717)
+shape = SubResource("RectangleShape2D_1c2mv")
+
+[node name="Sprites" type="Node2D" parent="." unique_id=18370574]
+
+[node name="GreenBook" type="Sprite2D" parent="Sprites" unique_id=120652312]
+position = Vector2(-2, 47)
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook7" type="Sprite2D" parent="Sprites" unique_id=883987712]
+position = Vector2(-169, 47)
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook8" type="Sprite2D" parent="Sprites" unique_id=1545796849]
+position = Vector2(-334, 47)
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook9" type="Sprite2D" parent="Sprites" unique_id=1247130690]
+position = Vector2(-386, -71)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook10" type="Sprite2D" parent="Sprites" unique_id=17543722]
+position = Vector2(-387.99997, -238)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook14" type="Sprite2D" parent="Sprites" unique_id=1477900874]
+position = Vector2(-504.99994, -290)
+rotation = 3.1411982
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook15" type="Sprite2D" parent="Sprites" unique_id=2051740653]
+position = Vector2(-667, -290.99997)
+rotation = 3.1411982
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook11" type="Sprite2D" parent="Sprites" unique_id=2048290676]
+position = Vector2(-253.62012, -139.83722)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook12" type="Sprite2D" parent="Sprites" unique_id=1946797806]
+position = Vector2(-252.62009, -306.83722)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook26" type="Sprite2D" parent="Sprites" unique_id=1270485218]
+position = Vector2(-251.62009, -467.83722)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook27" type="Sprite2D" parent="Sprites" unique_id=441845429]
+position = Vector2(-250.62006, -634.8372)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook28" type="Sprite2D" parent="Sprites" unique_id=302994083]
+position = Vector2(-122.62009, -139.83722)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook29" type="Sprite2D" parent="Sprites" unique_id=303201428]
+position = Vector2(-121.620056, -306.83722)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook30" type="Sprite2D" parent="Sprites" unique_id=43631488]
+position = Vector2(-120.620056, -467.83722)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook31" type="Sprite2D" parent="Sprites" unique_id=1444333347]
+position = Vector2(-119.620026, -634.8372)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook32" type="Sprite2D" parent="Sprites" unique_id=1898707832]
+position = Vector2(-121.62009, -801.8372)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook33" type="Sprite2D" parent="Sprites" unique_id=39858518]
+position = Vector2(-120.620056, -968.8372)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook34" type="Sprite2D" parent="Sprites" unique_id=1314975351]
+position = Vector2(-119.620056, -1129.8372)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook35" type="Sprite2D" parent="Sprites" unique_id=1935640723]
+position = Vector2(-118.620026, -1296.8372)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook36" type="Sprite2D" parent="Sprites" unique_id=495200880]
+position = Vector2(-247.62009, -799.83734)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook37" type="Sprite2D" parent="Sprites" unique_id=775720176]
+position = Vector2(-246.62006, -966.83734)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook38" type="Sprite2D" parent="Sprites" unique_id=1214591773]
+position = Vector2(-245.62006, -1127.8373)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook39" type="Sprite2D" parent="Sprites" unique_id=1001533578]
+position = Vector2(-244.62003, -1294.8373)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook16" type="Sprite2D" parent="Sprites" unique_id=1202435291]
+position = Vector2(-787, -404)
+rotation = 1.5663744
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook2" type="Sprite2D" parent="Sprites" unique_id=1441215097]
+position = Vector2(134, 85)
+rotation = 0.54808456
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook17" type="Sprite2D" parent="Sprites" unique_id=1699077784]
+position = Vector2(-882.00006, -424.00003)
+rotation = -0.3910823
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook18" type="Sprite2D" parent="Sprites" unique_id=327371534]
+position = Vector2(-1037, -361.00003)
+rotation = -0.3910823
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook19" type="Sprite2D" parent="Sprites" unique_id=1923048298]
+position = Vector2(-1190, -299)
+rotation = -0.3910823
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook20" type="Sprite2D" parent="Sprites" unique_id=121799226]
+position = Vector2(-1343, -237.00009)
+rotation = -0.3910823
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook21" type="Sprite2D" parent="Sprites" unique_id=872274221]
+position = Vector2(-1493, -174.00003)
+rotation = -0.3910823
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook22" type="Sprite2D" parent="Sprites" unique_id=86536359]
+position = Vector2(-1617, -257)
+rotation = 1.5707964
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook23" type="Sprite2D" parent="Sprites" unique_id=1456145856]
+position = Vector2(-1617, -424)
+rotation = 1.5707964
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook24" type="Sprite2D" parent="Sprites" unique_id=1044284615]
+position = Vector2(-1617, -591)
+rotation = 1.5707964
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook25" type="Sprite2D" parent="Sprites" unique_id=2119280296]
+position = Vector2(-1614, -759)
+rotation = 1.5707964
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook6" type="Sprite2D" parent="Sprites" unique_id=1596778673]
+position = Vector2(708, 113.00001)
+rotation = 0.54808456
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook3" type="Sprite2D" parent="Sprites" unique_id=1338386576]
+position = Vector2(295.00003, 131)
+rotation = -0.00022512674
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook4" type="Sprite2D" parent="Sprites" unique_id=463961556]
+position = Vector2(456.00003, 131)
+rotation = -0.00022512674
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook13" type="Sprite2D" parent="Sprites" unique_id=1898983309]
+position = Vector2(875.99994, 114.99997)
+rotation = -0.5279876
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook5" type="Sprite2D" parent="Sprites" unique_id=1798009406]
+position = Vector2(592.00006, 105.000015)
+rotation = -0.41359493
+scale = Vector2(0.99999994, 0.99999994)
+texture = ExtResource("2_eglq2")
+
+[node name="Wall Test Project" type="Node2D" parent="." unique_id=1901745088]
+
+[node name="Wall" type="StaticBody2D" parent="Wall Test Project" unique_id=650103327]
+position = Vector2(1199, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall" unique_id=1739300508]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall" unique_id=1055585165]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall" unique_id=1607435236]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall2" type="StaticBody2D" parent="Wall Test Project" unique_id=646879849]
+position = Vector2(1524, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall2" unique_id=1450318079]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall2" unique_id=1261986329]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall2" unique_id=351686401]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall3" type="StaticBody2D" parent="Wall Test Project" unique_id=1877915875]
+position = Vector2(1848, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall3" unique_id=1772777781]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall3" unique_id=1477803353]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall3" unique_id=1339183220]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall4" type="StaticBody2D" parent="Wall Test Project" unique_id=1074277754]
+position = Vector2(2172, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall4" unique_id=1860789113]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall4" unique_id=433234644]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall4" unique_id=298450633]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall5" type="StaticBody2D" parent="Wall Test Project" unique_id=788204740]
+position = Vector2(2497, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall5" unique_id=1501817442]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall5" unique_id=1566154916]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall5" unique_id=801200933]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall6" type="StaticBody2D" parent="Wall Test Project" unique_id=448837488]
+position = Vector2(2821, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall6" unique_id=1064593161]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall6" unique_id=424495663]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall6" unique_id=1770020701]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall7" type="StaticBody2D" parent="Wall Test Project" unique_id=1366964359]
+position = Vector2(3146, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall7" unique_id=1726442356]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall7" unique_id=353206252]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall7" unique_id=572709731]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall8" type="StaticBody2D" parent="Wall Test Project" unique_id=2119564662]
+position = Vector2(3471, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall8" unique_id=1411404521]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall8" unique_id=1666244820]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall8" unique_id=1600943177]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall9" type="StaticBody2D" parent="Wall Test Project" unique_id=2027354109]
+position = Vector2(3795, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall9" unique_id=383965667]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall9" unique_id=1086764918]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall9" unique_id=1864756829]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall10" type="StaticBody2D" parent="Wall Test Project" unique_id=1794035210]
+position = Vector2(4119, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall10" unique_id=1798094098]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall10" unique_id=135828359]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall10" unique_id=31734628]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall11" type="StaticBody2D" parent="Wall Test Project" unique_id=381338789]
+position = Vector2(4444, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall11" unique_id=1341085266]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall11" unique_id=1905202520]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall11" unique_id=2043428945]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall12" type="StaticBody2D" parent="Wall Test Project" unique_id=325887744]
+position = Vector2(4768, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall12" unique_id=296394062]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall12" unique_id=2025814804]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall12" unique_id=749846586]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall13" type="StaticBody2D" parent="Wall Test Project" unique_id=1163454426]
+position = Vector2(5092, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall13" unique_id=229109870]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall13" unique_id=1579364958]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall13" unique_id=2085402285]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall14" type="StaticBody2D" parent="Wall Test Project" unique_id=1934443925]
+position = Vector2(5417, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall14" unique_id=1750941174]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall14" unique_id=1738808619]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall14" unique_id=882593504]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall15" type="StaticBody2D" parent="Wall Test Project" unique_id=583856249]
+position = Vector2(5741, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall15" unique_id=437080003]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall15" unique_id=532836627]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall15" unique_id=2142072172]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall16" type="StaticBody2D" parent="Wall Test Project" unique_id=1418856705]
+position = Vector2(6065, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall16" unique_id=850024889]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall16" unique_id=1662670913]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall16" unique_id=1127385470]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall17" type="StaticBody2D" parent="Wall Test Project" unique_id=550448308]
+position = Vector2(6390, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall17" unique_id=763594549]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall17" unique_id=260778030]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall17" unique_id=1492929345]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall18" type="StaticBody2D" parent="Wall Test Project" unique_id=1855577461]
+position = Vector2(6714, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall18" unique_id=1369267476]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall18" unique_id=605923113]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall18" unique_id=1187670035]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall19" type="StaticBody2D" parent="Wall Test Project" unique_id=1734241936]
+position = Vector2(7039, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall19" unique_id=321387502]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall19" unique_id=1160041870]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall19" unique_id=50878670]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall20" type="StaticBody2D" parent="Wall Test Project" unique_id=1194142024]
+position = Vector2(7364, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall20" unique_id=348470717]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall20" unique_id=692623686]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall20" unique_id=883286603]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall21" type="StaticBody2D" parent="Wall Test Project" unique_id=1443489447]
+position = Vector2(7688, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall21" unique_id=2066249749]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall21" unique_id=1203026507]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall21" unique_id=41919031]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall22" type="StaticBody2D" parent="Wall Test Project" unique_id=1930815399]
+position = Vector2(8012, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall22" unique_id=1777538435]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall22" unique_id=196463258]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall22" unique_id=1557751490]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall23" type="StaticBody2D" parent="Wall Test Project" unique_id=1454158750]
+position = Vector2(8337, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall23" unique_id=1496846663]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall23" unique_id=445658075]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall23" unique_id=616557323]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall24" type="StaticBody2D" parent="Wall Test Project" unique_id=1736525437]
+position = Vector2(8661, 156)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall24" unique_id=1221662185]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall24" unique_id=457078283]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall24" unique_id=1544074866]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall25" type="StaticBody2D" parent="Wall Test Project" unique_id=1742082348]
+position = Vector2(1233, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall25" unique_id=999918129]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall25" unique_id=1187231142]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall25" unique_id=1063462507]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall26" type="StaticBody2D" parent="Wall Test Project" unique_id=371625247]
+position = Vector2(1558, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall26" unique_id=1929456792]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall26" unique_id=1875561421]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall26" unique_id=817399354]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall27" type="StaticBody2D" parent="Wall Test Project" unique_id=382458646]
+position = Vector2(1882, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall27" unique_id=1072263643]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall27" unique_id=854072343]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall27" unique_id=1235865034]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall28" type="StaticBody2D" parent="Wall Test Project" unique_id=2042753288]
+position = Vector2(2206, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall28" unique_id=1977901339]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall28" unique_id=1001323179]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall28" unique_id=1439328411]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall29" type="StaticBody2D" parent="Wall Test Project" unique_id=672256388]
+position = Vector2(2531, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall29" unique_id=574988220]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall29" unique_id=1554245103]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall29" unique_id=1538388695]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall30" type="StaticBody2D" parent="Wall Test Project" unique_id=1815812810]
+position = Vector2(2855, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall30" unique_id=2125222007]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall30" unique_id=1164558662]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall30" unique_id=1429375787]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall31" type="StaticBody2D" parent="Wall Test Project" unique_id=1959893434]
+position = Vector2(3180, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall31" unique_id=720550527]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall31" unique_id=1834984637]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall31" unique_id=478360626]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall32" type="StaticBody2D" parent="Wall Test Project" unique_id=2145928551]
+position = Vector2(3505, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall32" unique_id=1640241759]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall32" unique_id=514857604]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall32" unique_id=1600447133]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall33" type="StaticBody2D" parent="Wall Test Project" unique_id=736851559]
+position = Vector2(3829, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall33" unique_id=159101048]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall33" unique_id=1125313480]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall33" unique_id=544070302]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall34" type="StaticBody2D" parent="Wall Test Project" unique_id=146924854]
+position = Vector2(4153, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall34" unique_id=1543393523]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall34" unique_id=363714484]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall34" unique_id=851575431]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall35" type="StaticBody2D" parent="Wall Test Project" unique_id=218279204]
+position = Vector2(4478, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall35" unique_id=1179018264]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall35" unique_id=1796796305]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall35" unique_id=760620360]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall36" type="StaticBody2D" parent="Wall Test Project" unique_id=1077460154]
+position = Vector2(4802, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall36" unique_id=359822602]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall36" unique_id=758548000]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall36" unique_id=2144098834]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall37" type="StaticBody2D" parent="Wall Test Project" unique_id=227603559]
+position = Vector2(5126, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall37" unique_id=1079734288]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall37" unique_id=138874516]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall37" unique_id=2123291676]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall38" type="StaticBody2D" parent="Wall Test Project" unique_id=485276546]
+position = Vector2(5451, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall38" unique_id=1016685637]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall38" unique_id=1146355266]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall38" unique_id=89988487]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall39" type="StaticBody2D" parent="Wall Test Project" unique_id=1580337874]
+position = Vector2(5775, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall39" unique_id=682318790]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall39" unique_id=1355861980]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall39" unique_id=1557714716]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall40" type="StaticBody2D" parent="Wall Test Project" unique_id=987191901]
+position = Vector2(6099, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall40" unique_id=481934209]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall40" unique_id=194921315]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall40" unique_id=1890657405]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall41" type="StaticBody2D" parent="Wall Test Project" unique_id=710339031]
+position = Vector2(6424, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall41" unique_id=484654324]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall41" unique_id=1231518927]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall41" unique_id=1440542065]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall42" type="StaticBody2D" parent="Wall Test Project" unique_id=219709505]
+position = Vector2(6748, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall42" unique_id=438171390]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall42" unique_id=1963549544]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall42" unique_id=508316937]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall43" type="StaticBody2D" parent="Wall Test Project" unique_id=1082881246]
+position = Vector2(7073, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall43" unique_id=1438606248]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall43" unique_id=475874614]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall43" unique_id=194832566]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall44" type="StaticBody2D" parent="Wall Test Project" unique_id=384818325]
+position = Vector2(7398, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall44" unique_id=1390045772]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall44" unique_id=918091739]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall44" unique_id=590766649]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall45" type="StaticBody2D" parent="Wall Test Project" unique_id=2141934483]
+position = Vector2(7722, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall45" unique_id=1520438639]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall45" unique_id=797875073]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall45" unique_id=1626557621]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall46" type="StaticBody2D" parent="Wall Test Project" unique_id=1932792018]
+position = Vector2(8046, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall46" unique_id=2008123082]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall46" unique_id=499816926]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall46" unique_id=1904700071]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall47" type="StaticBody2D" parent="Wall Test Project" unique_id=607586328]
+position = Vector2(8371, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall47" unique_id=1068126659]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall47" unique_id=283778611]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall47" unique_id=1734178454]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Wall48" type="StaticBody2D" parent="Wall Test Project" unique_id=716593456]
+position = Vector2(8695, -1903)
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="Wall Test Project/Wall48" unique_id=1605326946]
+polygon = PackedVector2Array(-164, 6, -164, 77, 161, 77, 161, 6, 23, 6, 23, -76, -20, -76, -20, 6)
+
+[node name="Sprite2D" type="Sprite2D" parent="Wall Test Project/Wall48" unique_id=663628572]
+position = Vector2(-0.9998779, 41)
+scale = Vector2(324.74997, 71)
+texture = SubResource("PlaceholderTexture2D_di8lm")
+
+[node name="Sprite2D2" type="Sprite2D" parent="Wall Test Project/Wall48" unique_id=1365314728]
+position = Vector2(1.2499902, -35.000004)
+scale = Vector2(43.50002, 82)
+texture = SubResource("PlaceholderTexture2D_di8lm")
