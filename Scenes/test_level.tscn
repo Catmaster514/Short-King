@@ -4,16 +4,14 @@
 [ext_resource type="Texture2D" uid="uid://dxb2jh8w1eiv3" path="res://Assets/Art/Green Book.png" id="2_eglq2"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_1c2mv"]
-size = Vector2(71.25, 1327)
+size = Vector2(71.25, 1317.8125)
 
 [sub_resource type="PlaceholderTexture2D" id="PlaceholderTexture2D_di8lm"]
 
 [node name="Test level" type="Node" unique_id=1218631650]
 
 [node name="Player" parent="." unique_id=547901697 instance=ExtResource("1_dtjkg")]
-position = Vector2(5155, -33)
-rotation = 1.5707964
-scale = Vector2(-1, 1)
+position = Vector2(-802, -681)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=601290605]
 zoom = Vector2(1.745, 1.745)
@@ -22,14 +20,14 @@ zoom = Vector2(1.745, 1.745)
 position = Vector2(-4, 2)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D" unique_id=201880106]
-polygon = PackedVector2Array(929, 42, 929, -92, 1039, -92, 1039, 231, -408, 226, -421, 82, -825, -318, -1678, -36, -1584, -843, -1585, -174, -1541, -192, -825, -488, -754, -488, -754, -323, -422, -323, -354, -323, -354, 13, 80, 13, 211, 97, 367.11902, 97.00006, 525, 97, 653, 40, 791, 125)
+polygon = PackedVector2Array(929, 42, 929, -92, 1039, -92, 1039, 231, -408, 226, -421, 82, -825, -318, -1585, -34, -2050, -34, -2050, -392, -1981, -392, -1981, -378, -1926, -378, -1926, -359, -1863, -359, -1863, -319, -1807, -319, -1807, -275, -1744, -275, -1744, -174, -1585, -174, -1541, -192, -825, -488, -754, -488, -754, -323, -422, -323, -354, -323, -354, 13, 80, 13, 211, 97, 367.11902, 97.00006, 525, 97, 653, 40, 791, 125)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=985643096]
-position = Vector2(-254.625, -717.5)
+position = Vector2(-244, -719.09375)
 shape = SubResource("RectangleShape2D_1c2mv")
 
 [node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=291224487]
-position = Vector2(-116, -717)
+position = Vector2(-116, -718.8125)
 shape = SubResource("RectangleShape2D_1c2mv")
 
 [node name="Sprites" type="Node2D" parent="." unique_id=18370574]
@@ -182,22 +180,32 @@ rotation = -0.3910823
 texture = ExtResource("2_eglq2")
 
 [node name="GreenBook22" type="Sprite2D" parent="Sprites" unique_id=86536359]
-position = Vector2(-1617, -257)
-rotation = 1.5707964
+position = Vector2(-1662, -140)
+rotation = 8.761883e-05
 texture = ExtResource("2_eglq2")
 
 [node name="GreenBook23" type="Sprite2D" parent="Sprites" unique_id=1456145856]
-position = Vector2(-1617, -424)
+position = Vector2(-1783, -189)
 rotation = 1.5707964
 texture = ExtResource("2_eglq2")
 
 [node name="GreenBook24" type="Sprite2D" parent="Sprites" unique_id=1044284615]
-position = Vector2(-1617, -591)
+position = Vector2(-1846, -232)
 rotation = 1.5707964
 texture = ExtResource("2_eglq2")
 
 [node name="GreenBook25" type="Sprite2D" parent="Sprites" unique_id=2119280296]
-position = Vector2(-1614, -759)
+position = Vector2(-1901, -270)
+rotation = 1.5707964
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook40" type="Sprite2D" parent="Sprites" unique_id=15918665]
+position = Vector2(-1965, -291)
+rotation = 1.5707964
+texture = ExtResource("2_eglq2")
+
+[node name="GreenBook41" type="Sprite2D" parent="Sprites" unique_id=256901633]
+position = Vector2(-2020, -304)
 rotation = 1.5707964
 texture = ExtResource("2_eglq2")
 

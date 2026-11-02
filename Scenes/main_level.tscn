@@ -11,6 +11,7 @@
 [ext_resource type="Texture2D" uid="uid://dchq6hf4ufq1v" path="res://Assets/Art/Canless Computer.png" id="5_and0o"]
 [ext_resource type="Texture2D" uid="uid://u3bec6p8v6yh" path="res://Assets/Art/Red Can.png" id="5_lwkuy"]
 [ext_resource type="Texture2D" uid="uid://3fadw8sakvgl" path="res://Assets/Art/Keyboard.png" id="9_jf8f8"]
+[ext_resource type="Texture2D" uid="uid://c1hmm7nhubqlb" path="res://Assets/Art/Red Book.png" id="9_o0i6v"]
 [ext_resource type="Texture2D" uid="uid://ni1n7403dsws" path="res://Assets/Art/Blue Cans.png" id="10_qx7ya"]
 [ext_resource type="Texture2D" uid="uid://upebardb5lfk" path="res://Assets/Art/Ground Tile.png" id="12_d4dc6"]
 [ext_resource type="Texture2D" uid="uid://cboy3swgi5i13" path="res://Assets/Art/Mouse.png" id="13_7wxy1"]
@@ -19,7 +20,6 @@
 [ext_resource type="Texture2D" uid="uid://c1okhupwyikd3" path="res://Assets/Art/Heavy Figurine.png" id="15_jf8f8"]
 [ext_resource type="Texture2D" uid="uid://dxb2jh8w1eiv3" path="res://Assets/Art/Green Book.png" id="15_o0i6v"]
 [ext_resource type="Texture2D" uid="uid://bilu3rddib4i" path="res://Assets/Art/Sonic Figurine.png" id="16_jf8f8"]
-[ext_resource type="Texture2D" uid="uid://c1hmm7nhubqlb" path="res://Assets/Art/Red Book.png" id="18_qx7ya"]
 [ext_resource type="Texture2D" uid="uid://2buhld27ac07" path="res://Assets/Art/Muffin Figurine.png" id="20_7wxy1"]
 [ext_resource type="Texture2D" uid="uid://1pr1l7r1krqd" path="res://Assets/Art/Blue Can.png" id="21_7wxy1"]
 [ext_resource type="Texture2D" uid="uid://dk71ki3hlmjxg" path="res://Assets/Art/Toy Car.png" id="22_o0i6v"]
@@ -63,9 +63,6 @@ _data = {
 &"spin": SubResource("Animation_yfdo3")
 }
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_08yj4"]
-size = Vector2(1059, 206.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_i7ce5"]
 size = Vector2(32.125, 27.5)
 
@@ -93,44 +90,11 @@ size = Vector2(737, 364.5)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_unjri"]
 size = Vector2(474.5, 373.25)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_ddui2"]
-size = Vector2(513.5, 126.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_m5xbg"]
-size = Vector2(383, 126.25)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_5cgdp"]
 size = Vector2(376.5, 124)
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4l012"]
-size = Vector2(128.25, 131)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_1ubp3"]
-size = Vector2(51.125, 104.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_bhrpm"]
-size = Vector2(128.25, 729.5)
-
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_c1xrl"]
 size = Vector2(114.81348, 73.875)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_o0i6v"]
-size = Vector2(128.25, 384)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_30qra"]
-size = Vector2(138.125, 155.25)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_w6jpp"]
-size = Vector2(951, 130.5)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_p5w27"]
-size = Vector2(107.125, 67)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_r6y0e"]
-size = Vector2(128.25, 12)
-
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_76m0p"]
-size = Vector2(659.25, 111)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_gmjuu"]
 size = Vector2(133, 881)
@@ -142,7 +106,7 @@ size = Vector2(133, 876)
 size = Vector2(380.5, 129)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_e0ifq"]
-size = Vector2(567, 727)
+size = Vector2(567, 717.5)
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_ywg1y"]
 size = Vector2(131.5, 522)
@@ -160,17 +124,31 @@ sources/1 = SubResource("TileSetAtlasSource_o0i6v")
 
 [node name="Main Level" type="Node" unique_id=1949800986]
 
-[node name="Player" parent="." unique_id=547901697 instance=ExtResource("1_q2fht")]
-z_index = 6
-position = Vector2(4884, -1310)
-
-[node name="Camera2D" type="Camera2D" parent="Player" unique_id=633195040]
-zoom = Vector2(1.22, 1.22)
-
 [node name="Level" type="Node2D" parent="." unique_id=543166622]
+scale = Vector2(0.32, 0.32)
 
 [node name="Sprites" type="Node2D" parent="Level" unique_id=718363450]
 modulate = Color(0.9340804, 0.9340805, 0.93408036, 1)
+
+[node name="Background Objects" type="Node2D" parent="Level/Sprites" unique_id=296760730]
+
+[node name="Background" type="Sprite2D" parent="Level/Sprites/Background Objects" unique_id=1262847307]
+z_index = -11
+position = Vector2(1084.3751, -700)
+scale = Vector2(9.017188, 8.6236105)
+texture = ExtResource("25_1ubp3")
+
+[node name="ShelfBack" type="Sprite2D" parent="Level/Sprites/Background Objects" unique_id=863290167]
+z_index = -5
+position = Vector2(4313, -252)
+scale = Vector2(3.087, 4.003)
+texture = ExtResource("2_d4dc6")
+
+[node name="Shelf" type="Sprite2D" parent="Level/Sprites/Background Objects" unique_id=1216759262]
+z_index = -1
+position = Vector2(4313, -252)
+scale = Vector2(3.0873842, 4.0033684)
+texture = ExtResource("14_and0o")
 
 [node name="Cans" type="Node2D" parent="Level/Sprites" unique_id=102885136]
 
@@ -180,11 +158,6 @@ modulate = Color(0.9340804, 0.9340805, 0.93408036, 1)
 position = Vector2(2480, 963.5)
 scale = Vector2(1.5714285, 1.4402986)
 texture = ExtResource("10_qx7ya")
-
-[node name="BlueCan" type="Sprite2D" parent="Level/Sprites/Cans/Blue" unique_id=1203429068]
-z_index = -2
-position = Vector2(4547.5, -199)
-texture = ExtResource("21_7wxy1")
 
 [node name="BlueCan7" type="Sprite2D" parent="Level/Sprites/Cans/Blue" unique_id=888445907]
 z_index = -2
@@ -198,34 +171,6 @@ position = Vector2(391, -251.00003)
 rotation = -0.9080092
 scale = Vector2(1.3700744, 1.8771518)
 texture = ExtResource("21_7wxy1")
-
-[node name="BlueCan2" type="Sprite2D" parent="Level/Sprites/Cans/Blue" unique_id=503338236]
-z_index = -2
-position = Vector2(4545, -408)
-texture = ExtResource("21_7wxy1")
-
-[node name="BlueCan3" type="Sprite2D" parent="Level/Sprites/Cans/Blue" unique_id=1317069102]
-z_index = -2
-position = Vector2(4680.5, -199)
-texture = ExtResource("21_7wxy1")
-flip_h = true
-
-[node name="BlueCan4" type="Sprite2D" parent="Level/Sprites/Cans/Blue" unique_id=427572605]
-z_index = -2
-position = Vector2(4678, -408)
-texture = ExtResource("21_7wxy1")
-flip_h = true
-
-[node name="BlueCan5" type="Sprite2D" parent="Level/Sprites/Cans/Blue" unique_id=1362097442]
-z_index = -2
-position = Vector2(4546, -609)
-texture = ExtResource("21_7wxy1")
-
-[node name="BlueCan6" type="Sprite2D" parent="Level/Sprites/Cans/Blue" unique_id=61444842]
-z_index = -2
-position = Vector2(4677, -609)
-texture = ExtResource("21_7wxy1")
-flip_h = true
 
 [node name="Green" type="Node2D" parent="Level/Sprites/Cans" unique_id=1600232792]
 
@@ -438,12 +383,6 @@ position = Vector2(3984.5, 122)
 texture = ExtResource("5_lwkuy")
 flip_h = true
 
-[node name="RedCan2" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=942394260]
-position = Vector2(2426, 722)
-rotation = -3.1415925
-scale = Vector2(1, -1)
-texture = ExtResource("5_lwkuy")
-
 [node name="RedCan3" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=667605793]
 modulate = Color(0.41960785, 0.41960785, 0.41960785, 1)
 z_index = 1
@@ -593,55 +532,6 @@ rotation = -3.1415925
 scale = Vector2(-1.188, -1.3562126)
 texture = ExtResource("5_lwkuy")
 
-[node name="RedCan24" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=1929963103]
-z_index = -2
-position = Vector2(4545.5, -309)
-texture = ExtResource("5_lwkuy")
-
-[node name="RedCan23" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=1516403597]
-z_index = -2
-position = Vector2(4544.5, -514)
-texture = ExtResource("5_lwkuy")
-
-[node name="RedCan25" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=2005259117]
-z_index = -2
-position = Vector2(4678.5, -309)
-texture = ExtResource("5_lwkuy")
-flip_h = true
-
-[node name="RedCan26" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=1991054074]
-z_index = -2
-position = Vector2(4676.5, -514)
-texture = ExtResource("5_lwkuy")
-flip_h = true
-
-[node name="RedCan27" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=1307673263]
-z_index = -2
-position = Vector2(4544.5, -715)
-texture = ExtResource("5_lwkuy")
-
-[node name="RedCan28" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=1970297699]
-z_index = -2
-position = Vector2(4675.5, -715)
-texture = ExtResource("5_lwkuy")
-flip_h = true
-
-[node name="RedCan29" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=1276732012]
-z_index = -2
-position = Vector2(4546, -998)
-texture = ExtResource("5_lwkuy")
-
-[node name="RedCan30" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=67546480]
-z_index = -2
-position = Vector2(4681.5, -998)
-texture = ExtResource("5_lwkuy")
-flip_h = true
-
-[node name="RedCan39" type="Sprite2D" parent="Level/Sprites/Cans/Red" unique_id=1258152262]
-position = Vector2(4651, -1207)
-scale = Vector2(0.6325301, 0.60119045)
-texture = ExtResource("5_lwkuy")
-
 [node name="RedKings" type="Node2D" parent="Level/Sprites/Cans" unique_id=1213833356]
 position = Vector2(-188, 104)
 scale = Vector2(0.74, 0.74)
@@ -709,8 +599,19 @@ scale = Vector2(2.8729384, 1.9043673)
 texture = ExtResource("2_ikcpc")
 
 [node name="RedKing11" type="Sprite2D" parent="Level/Sprites/Cans/RedKings/Left" unique_id=267582262]
-position = Vector2(6962.161, -2441.8914)
-scale = Vector2(2.1477172, 1.2477905)
+position = Vector2(6962.1616, -2441.8914)
+scale = Vector2(2.1477175, 1.2477906)
+texture = ExtResource("2_ikcpc")
+
+[node name="RedKing12" type="Sprite2D" parent="Level/Sprites/Cans/RedKings/Left" unique_id=94930847]
+position = Vector2(7665.372, -3071.2832)
+scale = Vector2(41.05618, 41.129112)
+texture = ExtResource("2_ikcpc")
+
+[node name="RedKing13" type="Sprite2D" parent="Level/Sprites/Cans/RedKings/Left" unique_id=938777533]
+position = Vector2(6246.4536, -4545.102)
+rotation = -1.5706357
+scale = Vector2(41.05618, 41.129112)
 texture = ExtResource("2_ikcpc")
 
 [node name="Right" type="Node2D" parent="Level/Sprites/Cans/RedKings" unique_id=851317324]
@@ -772,42 +673,59 @@ position = Vector2(5931.6704, -2461.4175)
 scale = Vector2(2.1477172, 0.6872358)
 texture = ExtResource("2_ikcpc")
 
+[node name="Spiral" type="Node2D" parent="Level/Sprites/Cans" unique_id=673208913]
+
+[node name="BlueCan" type="Sprite2D" parent="Level/Sprites/Cans/Spiral" unique_id=1203429068]
+z_index = -2
+position = Vector2(4546.875, -193.75)
+texture = ExtResource("21_7wxy1")
+
+[node name="RedCan25" type="Sprite2D" parent="Level/Sprites/Cans/Spiral" unique_id=2005259117]
+z_index = -2
+position = Vector2(4546.875, -296.875)
+texture = ExtResource("5_lwkuy")
+flip_h = true
+
+[node name="BlueCan2" type="Sprite2D" parent="Level/Sprites/Cans/Spiral" unique_id=1883840027]
+z_index = -2
+position = Vector2(4546.875, -384.375)
+texture = ExtResource("21_7wxy1")
+
+[node name="RedCan26" type="Sprite2D" parent="Level/Sprites/Cans/Spiral" unique_id=1431107289]
+z_index = -2
+position = Vector2(4543.75, -487.5)
+texture = ExtResource("5_lwkuy")
+flip_h = true
+
+[node name="BlueCan3" type="Sprite2D" parent="Level/Sprites/Cans/Spiral" unique_id=1594723238]
+z_index = -2
+position = Vector2(4543.75, -575)
+texture = ExtResource("21_7wxy1")
+
+[node name="RedCan27" type="Sprite2D" parent="Level/Sprites/Cans/Spiral" unique_id=1864586565]
+z_index = -2
+position = Vector2(4543.75, -678.125)
+texture = ExtResource("5_lwkuy")
+flip_h = true
+
 [node name="Books" type="Node2D" parent="Level/Sprites" unique_id=473243402]
 
 [node name="Red" type="Node2D" parent="Level/Sprites/Books" unique_id=693536095]
 
-[node name="RedBook5" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=1439522871]
-position = Vector2(4936, -1200)
-texture = ExtResource("18_qx7ya")
+[node name="RedBook" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=609761099]
+position = Vector2(4836.625, -559.4375)
+scale = Vector2(0.54664177, 0.523855)
+texture = ExtResource("9_o0i6v")
 
-[node name="RedBook6" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=978213987]
-position = Vector2(5061, -1264)
-texture = ExtResource("18_qx7ya")
+[node name="RedBook2" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=1684126448]
+position = Vector2(4771, -759.4375)
+scale = Vector2(0.54664177, 0.523855)
+texture = ExtResource("9_o0i6v")
 
-[node name="RedBook9" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=48274637]
-position = Vector2(4896, -1496)
-texture = ExtResource("18_qx7ya")
-
-[node name="RedBook11" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=1068958803]
-position = Vector2(4893, -1610)
-texture = ExtResource("18_qx7ya")
-
-[node name="RedBook8" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=2124756087]
-position = Vector2(5062, -1389)
-texture = ExtResource("18_qx7ya")
-
-[node name="RedBook10" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=1146862141]
-position = Vector2(5063, -1517)
-texture = ExtResource("18_qx7ya")
-
-[node name="RedBook12" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=482890256]
-position = Vector2(5113, -1617)
-texture = ExtResource("18_qx7ya")
-
-[node name="RedBook4" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=1647626006]
-position = Vector2(4807, -1150.9999)
-scale = Vector2(1, 0.99999994)
-texture = ExtResource("18_qx7ya")
+[node name="RedBook3" type="Sprite2D" parent="Level/Sprites/Books/Red" unique_id=248133457]
+position = Vector2(4836.625, -928.1875)
+scale = Vector2(0.54664177, 0.523855)
+texture = ExtResource("9_o0i6v")
 
 [node name="Blue" type="Node2D" parent="Level/Sprites/Books" unique_id=1827990393]
 
@@ -847,21 +765,52 @@ flip_v = true
 
 [node name="BlueBook6" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=1118493420]
 z_index = 2
-position = Vector2(3745.2925, -306.64413)
+position = Vector2(3862.8389, -317.88528)
 rotation = 1.5707964
-scale = Vector2(2.5037138, 2.5021148)
+scale = Vector2(2.8981407, 3.0847032)
 texture = ExtResource("14_8ce4n")
 
-[node name="BlueBook7" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=1771702438]
-z_index = 2
-position = Vector2(4618.0005, -1056.8882)
+[node name="BlueBook9" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=1777178655]
+modulate = Color(0.41215247, 0.41215247, 0.41215247, 1)
+position = Vector2(4750, -15.625004)
 rotation = 1.5707964
-scale = Vector2(1.2645324, 2.4144924)
+scale = Vector2(1.5268573, 1.8111404)
+texture = ExtResource("14_8ce4n")
+
+[node name="BlueBook10" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=1724128368]
+modulate = Color(0.41215247, 0.41215247, 0.41215247, 1)
+position = Vector2(4743.75, -93.750015)
+rotation = 1.5707964
+scale = Vector2(1.5268573, 1.8111404)
+texture = ExtResource("14_8ce4n")
+
+[node name="BlueBook11" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=1717659045]
+modulate = Color(0.41215247, 0.41215247, 0.41215247, 1)
+position = Vector2(4746.8745, -230.38995)
+rotation = 1.5707964
+scale = Vector2(1.277382, 1.8111404)
+texture = ExtResource("14_8ce4n")
+
+[node name="BlueBook14" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=34597556]
+modulate = Color(0.41215247, 0.41215247, 0.41215247, 1)
+position = Vector2(4746.875, -291.9624)
+rotation = 1.5707964
+scale = Vector2(1.2448419, 1.8111404)
+texture = ExtResource("14_8ce4n")
+
+[node name="BlueBook12" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=277878682]
+position = Vector2(4699.7656, -518.81165)
+scale = Vector2(1.5268573, 1.8111404)
+texture = ExtResource("14_8ce4n")
+
+[node name="BlueBook13" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=2070386240]
+position = Vector2(4624.7656, -825.0617)
+scale = Vector2(1.5268573, 1.8111404)
 texture = ExtResource("14_8ce4n")
 
 [node name="BlueBook4" type="Sprite2D" parent="Level/Sprites/Books/Blue" unique_id=1285393421]
-position = Vector2(4706.0107, 204.35254)
-rotation = -1.9198622
+position = Vector2(4675, 328.12512)
+rotation = -1.330404
 scale = Vector2(2.2093024, 2.7387233)
 texture = ExtResource("14_8ce4n")
 flip_h = true
@@ -880,20 +829,47 @@ rotation = -0.28433827
 scale = Vector2(3.030581, 1.7567567)
 texture = ExtResource("15_o0i6v")
 
+[node name="GreenBook4" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=539568327]
+position = Vector2(4353.9995, 359.99997)
+rotation = -0.4363518
+scale = Vector2(2.2093024, 1.7567569)
+texture = ExtResource("15_o0i6v")
+
 [node name="GreenBook5" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=322597434]
 position = Vector2(3752.63, -181.99992)
 scale = Vector2(3.0305808, 1.7567567)
 texture = ExtResource("15_o0i6v")
 
 [node name="GreenBook6" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=87574014]
-position = Vector2(4231, -456.00006)
+position = Vector2(4253.1255, -453.125)
 scale = Vector2(3.0305808, 1.7567567)
 texture = ExtResource("15_o0i6v")
 
-[node name="GreenBook4" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=539568327]
-position = Vector2(4353.9995, 359.99997)
-rotation = -0.43635178
-scale = Vector2(2.2093027, 1.7567569)
+[node name="GreenBook7" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=1187291085]
+position = Vector2(4690.625, 49.687496)
+scale = Vector2(1.308141, 1.0050675)
+texture = ExtResource("15_o0i6v")
+
+[node name="GreenBook8" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=10567307]
+position = Vector2(4775, -162.49998)
+scale = Vector2(1.308141, 1.0050675)
+texture = ExtResource("15_o0i6v")
+
+[node name="GreenBook10" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=934805711]
+position = Vector2(4693.75, -356.25)
+scale = Vector2(1.308141, 1.0050675)
+texture = ExtResource("15_o0i6v")
+
+[node name="GreenBook11" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=1833307567]
+position = Vector2(4699.7656, -807.4021)
+rotation = 1.5707964
+scale = Vector2(1.8398021, 1.1465337)
+texture = ExtResource("15_o0i6v")
+
+[node name="GreenBook12" type="Sprite2D" parent="Level/Sprites/Books/Green" unique_id=947019499]
+position = Vector2(4621.6406, -537.5615)
+rotation = 1.5707964
+scale = Vector2(1.7907858, 1.1465337)
 texture = ExtResource("15_o0i6v")
 
 [node name="Misc Decoratoins" type="Node2D" parent="Level/Sprites" unique_id=1401774046]
@@ -943,8 +919,8 @@ texture = ExtResource("16_jf8f8")
 
 [node name="HeavyFigurine" type="Sprite2D" parent="Level/Sprites/Misc Decoratoins" unique_id=97658138]
 z_index = -2
-position = Vector2(4720, 475)
-scale = Vector2(0.8348953, 0.7957517)
+position = Vector2(4659.3745, 528.125)
+scale = Vector2(0.58870083, 0.5561683)
 texture = ExtResource("15_jf8f8")
 
 [node name="MuffinFigurine" type="Sprite2D" parent="Level/Sprites/Misc Decoratoins" unique_id=508153030]
@@ -957,31 +933,6 @@ position = Vector2(3764.9998, -1036)
 scale = Vector2(1.1017964, 0.84108526)
 texture = ExtResource("22_o0i6v")
 
-[node name="Background Objects" type="Node2D" parent="Level/Sprites" unique_id=296760730]
-visible = false
-
-[node name="Background" type="Sprite2D" parent="Level/Sprites/Background Objects" unique_id=1262847307]
-z_index = -11
-position = Vector2(1569.0004, -460.50006)
-scale = Vector2(9.017188, 8.6236105)
-texture = ExtResource("25_1ubp3")
-
-[node name="ShelfBack" type="Sprite2D" parent="Level/Sprites/Background Objects" unique_id=863290167]
-z_index = -5
-position = Vector2(4313, -252)
-scale = Vector2(3.087, 4.003)
-texture = ExtResource("2_d4dc6")
-
-[node name="Shelf" type="Sprite2D" parent="Level/Sprites/Background Objects" unique_id=1216759262]
-z_index = -1
-position = Vector2(4313, -252)
-scale = Vector2(3.0873842, 4.0033684)
-texture = ExtResource("14_and0o")
-
-[node name="CollisionShape2D17" type="CollisionShape2D" parent="Level/Sprites/Background Objects" unique_id=577800486]
-position = Vector2(3973.5, -18.75)
-shape = SubResource("RectangleShape2D_08yj4")
-
 [node name="Collision" type="Node2D" parent="Level" unique_id=157655937]
 
 [node name="Polygons" type="StaticBody2D" parent="Level/Collision" unique_id=1825175398]
@@ -990,16 +941,21 @@ shape = SubResource("RectangleShape2D_08yj4")
 polygon = PackedVector2Array(3586, -1083, 3586, -986, 3949, -986, 3949, -1020, 3935, -1020, 3935, -1086, 3883, -1146, 3681, -1146, 3621, -1084)
 
 [node name="CollisionPolygon2D10" type="CollisionPolygon2D" parent="Level/Collision/Polygons" unique_id=112852753]
-polygon = PackedVector2Array(4869, 109, 4869, -46, 4643, -46, 4643, -1092, 4749, -1092, 4749, -119, 4939, -119, 4938, 109)
+position = Vector2(6.25, -3.125)
+polygon = PackedVector2Array(4868.75, 318.75, 4868.75, -53.125, 4868.75, -128.125, 4662.5, -128.125, 4662.5, -193.75, 4865.625, -193.75, 4865.625, -525, 4796.875, -525, 4796.875, -590.625, 4865.625, -590.625, 4865.625, -893.75, 4796.875, -893.75, 4796.875, -956.25, 4868.75, -956.25, 4868.75, -1484.375, 3440.625, -1484.375, 3440.625, -1678.125, 5175, -1675, 5175, -2953.125, 3571.875, -2950, 3571.875, -2978.125, 5175, -2978.125, 5212.5, -2978.125, 5212.5, -1675, 5215.625, 318.75)
 
 [node name="CollisionPolygon2D9" type="CollisionPolygon2D" parent="Level/Collision/Polygons" unique_id=1787684188]
-polygon = PackedVector2Array(4781, 82, 4781, 7, 4633, 7, 4586, 7, 4584, -1092, 4509, -1092, 4506, 79)
+position = Vector2(0, -21.875)
+polygon = PackedVector2Array(4800, 103.125, 4800, 37.5, 4584.375, 37.5, 4584.375, -303.125, 4800, -303.125, 4800, -365.625, 4737.5, -365.625, 4737.5, -706.25, 4803.125, -706.25, 4803.125, -768.75, 4737.5, -768.75, 4737.5, -937.5, 4584.375, -940.625, 4584.375, -912.5, 3450, -912.5, 3450, -665.625, 4509.375, -665.625, 4509.375, -493.75, 3993.75, -493.75, 3993.75, -371.875, 3637.5, -371.875, 3637.5, -218.75, 3493.75, -218.75, 3493.75, -103.125, 3450, -103.125, 3450, 103.125)
 
 [node name="CollisionPolygon2D8" type="CollisionPolygon2D" parent="Level/Collision/Polygons" unique_id=53029913]
-polygon = PackedVector2Array(3402, 742, 3373, 649, 3854, 509, 4161, 381, 4497, 222, 4830, 109, 4869, 109, 4879, 184)
+polygon = PackedVector2Array(3365.625, 721.875, 3365.625, 656.25, 3854, 509, 4161, 381, 4497, 222, 4893.75, 318.75, 4865.625, 434.375, 4525, 346.875, 3365.625, 1025)
+
+[node name="CollisionPolygon2D12" type="CollisionPolygon2D" parent="Level/Collision/Polygons" unique_id=1651626276]
+polygon = PackedVector2Array(2628.125, 784.375, 2628.125, 675, 3284.375, 675, 3284.375, 884.375, 3190.625, 884.375, 3190.625, 784.375)
 
 [node name="CollisionPolygon2D7" type="CollisionPolygon2D" parent="Level/Collision/Polygons" unique_id=1736890918]
-polygon = PackedVector2Array(2392, 648, 2412, 636, 2429, 657, 2467, 657, 2467, 779, 2490, 791, 2490, 903, 2512, 903, 2512, 917, 2521, 917, 2592, 1011, 2384, 1027)
+polygon = PackedVector2Array(2390.625, 746.875, 2467, 779, 2490, 791, 2490, 903, 2512, 903, 2512, 917, 2521, 917, 2592, 1011, 2384, 1027)
 
 [node name="CollisionPolygon2D6" type="CollisionPolygon2D" parent="Level/Collision/Polygons" unique_id=1544238571]
 position = Vector2(3, 0)
@@ -1073,41 +1029,9 @@ shape = SubResource("RectangleShape2D_di8lm")
 position = Vector2(-6.25, -378.625)
 shape = SubResource("RectangleShape2D_unjri")
 
-[node name="CollisionShape2D18" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1424803235]
-position = Vector2(3750.75, -184.125)
-shape = SubResource("RectangleShape2D_ddui2")
-
-[node name="CollisionShape2D20" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1699423897]
-position = Vector2(4228, -463)
-shape = SubResource("RectangleShape2D_ddui2")
-
-[node name="CollisionShape2D19" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=49884382]
-position = Vector2(3747.5, -311)
-shape = SubResource("RectangleShape2D_m5xbg")
-
 [node name="CollisionShape2D6" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=493934393]
 position = Vector2(2870.75, 995)
 shape = SubResource("RectangleShape2D_5cgdp")
-
-[node name="CollisionShape2D21" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=338650018]
-position = Vector2(4807, -1153)
-shape = SubResource("RectangleShape2D_4l012")
-
-[node name="CollisionShape2D26" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=361108375]
-position = Vector2(4651.5625, -1206.25)
-shape = SubResource("RectangleShape2D_1ubp3")
-
-[node name="CollisionShape2D25" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=2089546780]
-position = Vector2(4936, -1204)
-shape = SubResource("RectangleShape2D_4l012")
-
-[node name="CollisionShape2D30" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=309715472]
-position = Vector2(5113, -1619)
-shape = SubResource("RectangleShape2D_4l012")
-
-[node name="CollisionShape2D43" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1157473048]
-position = Vector2(5232, -1965.25)
-shape = SubResource("RectangleShape2D_bhrpm")
 
 [node name="CollisionShape2D32" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1539485049]
 position = Vector2(4966, -1705.125)
@@ -1153,31 +1077,6 @@ shape = SubResource("RectangleShape2D_bm8oi")
 position = Vector2(4295.4067, -1942)
 shape = SubResource("RectangleShape2D_c1xrl")
 
-[node name="CollisionShape2D27" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1538610459]
-position = Vector2(5062, -1391)
-shape = SubResource("RectangleShape2D_o0i6v")
-
-[node name="CollisionShape2D44" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1941617352]
-position = Vector2(3513.0625, -1604.625)
-shape = SubResource("RectangleShape2D_30qra")
-
-[node name="CollisionShape2D24" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1849240274]
-position = Vector2(4032.5, -872.75)
-shape = SubResource("RectangleShape2D_w6jpp")
-
-[node name="CollisionShape2D23" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1364418111]
-position = Vector2(4493.5625, -1058.5)
-shape = SubResource("RectangleShape2D_p5w27")
-
-[node name="CollisionShape2D22" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1715949224]
-position = Vector2(4608, -1086)
-shape = SubResource("RectangleShape2D_r6y0e")
-one_way_collision = true
-
-[node name="CollisionShape2D7" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=795061645]
-position = Vector2(2953.375, 726.5)
-shape = SubResource("RectangleShape2D_76m0p")
-
 [node name="CollisionShape2D11" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=106497891]
 position = Vector2(2766, -854.5)
 shape = SubResource("RectangleShape2D_gmjuu")
@@ -1195,16 +1094,24 @@ position = Vector2(2849, -1363)
 shape = SubResource("RectangleShape2D_ykarw")
 
 [node name="CollisionShape2D5" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=153980932]
-position = Vector2(2108.5, 691.5)
+position = Vector2(2108.5, 696.25006)
 shape = SubResource("RectangleShape2D_e0ifq")
 
 [node name="CollisionShape2D4" type="CollisionShape2D" parent="Level/Collision/Shapes" unique_id=1468647018]
 position = Vector2(-212.75, -826)
 shape = SubResource("RectangleShape2D_ywg1y")
 
-[node name="Floor" type="TileMapLayer" parent="Level" unique_id=374219186]
+[node name="Floor" type="TileMapLayer" parent="Level/Collision" unique_id=374219186]
 z_index = -4
 position = Vector2(-188, 104)
 scale = Vector2(0.95, 0.95)
-tile_map_data = PackedByteArray("AAD7/wQAAQAAAAAAAAD7/wUAAQAAAAAAAAD8/wQAAQAAAAAAAAD8/wUAAQAAAAAAAAD9/wQAAQAAAAAAAAD9/wUAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wUAAQAAAAAAAAD//wQAAQAAAAAAAAD//wUAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAQAAQAAAAAAAAABAAUAAQAAAAAAAAACAAQAAQAAAAAAAAACAAUAAQAAAAAAAAADAAQAAQAAAAAAAAADAAUAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAFAAQAAQAAAAAAAAAFAAUAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAUAAQAAAAAAAAAHAAQAAQAAAAAAAAAHAAUAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAALAAQAAQAAAAAAAAALAAUAAQAAAAAAAAAMAAQAAQAAAAAAAAAMAAUAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAUAAQAAAAAAAAAPAAQAAQAAAAAAAAAPAAUAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAUAAQAAAAAAAAARAAQAAQAAAAAAAAARAAUAAQAAAAAAAAASAAQAAQAAAAAAAAASAAUAAQAAAAAAAAATAAQAAQAAAAAAAAATAAUAAQAAAAAAAAAUAAQAAQAAAAAAAAAUAAUAAQAAAAAAAAAVAAQAAQAAAAAAAAAVAAUAAQAAAAAAAAAWAAQAAQAAAAAAAAAWAAUAAQAAAAAAAAAXAAQAAQAAAAAAAAAXAAUAAQAAAAAAAAAYAAQAAQAAAAAAAAAYAAUAAQAAAAAAAAAZAAQAAQAAAAAAAAAZAAUAAQAAAAAAAAA=")
+tile_map_data = PackedByteArray("AAD7/wQAAQAAAAAAAAD7/wUAAQAAAAAAAAD8/wQAAQAAAAAAAAD8/wUAAQAAAAAAAAD9/wQAAQAAAAAAAAD9/wUAAQAAAAAAAAD+/wQAAQAAAAAAAAD+/wUAAQAAAAAAAAD//wQAAQAAAAAAAAD//wUAAQAAAAAAAAAAAAQAAQAAAAAAAAAAAAUAAQAAAAAAAAABAAQAAQAAAAAAAAABAAUAAQAAAAAAAAACAAQAAQAAAAAAAAACAAUAAQAAAAAAAAADAAQAAQAAAAAAAAADAAUAAQAAAAAAAAAEAAQAAQAAAAAAAAAEAAUAAQAAAAAAAAAFAAQAAQAAAAAAAAAFAAUAAQAAAAAAAAAGAAQAAQAAAAAAAAAGAAUAAQAAAAAAAAAHAAQAAQAAAAAAAAAHAAUAAQAAAAAAAAAIAAQAAQAAAAAAAAAIAAUAAQAAAAAAAAAJAAQAAQAAAAAAAAAJAAUAAQAAAAAAAAAKAAQAAQAAAAAAAAAKAAUAAQAAAAAAAAALAAQAAQAAAAAAAAALAAUAAQAAAAAAAAAMAAQAAQAAAAAAAAAMAAUAAQAAAAAAAAANAAQAAQAAAAAAAAANAAUAAQAAAAAAAAAOAAQAAQAAAAAAAAAOAAUAAQAAAAAAAAAPAAQAAQAAAAAAAAAPAAUAAQAAAAAAAAAQAAQAAQAAAAAAAAAQAAUAAQAAAAAAAAARAAQAAQAAAAAAAAARAAUAAQAAAAAAAAASAAQAAQAAAAAAAAASAAUAAQAAAAAAAAATAAQAAQAAAAAAAAATAAUAAQAAAAAAAAAUAAQAAQAAAAAAAAAUAAUAAQAAAAAAAAAVAAQAAQAAAAAAAAAVAAUAAQAAAAAAAAAWAAQAAQAAAAAAAAAWAAUAAQAAAAAAAAAXAAQAAQAAAAAAAAAXAAUAAQAAAAAAAAAYAAQAAQAAAAAAAAAYAAUAAQAAAAAAAAD6/wUAAQAAAAAAAAD6/wQAAQAAAAAAAAA=")
 tile_set = SubResource("TileSet_di8lm")
+
+[node name="Player" parent="Level" unique_id=547901697 instance=ExtResource("1_q2fht")]
+z_index = 6
+position = Vector2(4715.625, 199.99994)
+scale = Vector2(1.09375, 1.09375)
+
+[node name="Camera2D" type="Camera2D" parent="Level/Player" unique_id=633195040]
+zoom = Vector2(6.585, 6.585)
