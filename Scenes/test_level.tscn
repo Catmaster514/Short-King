@@ -11,7 +11,8 @@ size = Vector2(71.25, 1317.8125)
 [node name="Test level" type="Node" unique_id=1218631650]
 
 [node name="Player" parent="." unique_id=547901697 instance=ExtResource("1_dtjkg")]
-position = Vector2(-802, -681)
+position = Vector2(-743, -504)
+scale = Vector2(-1, 1)
 
 [node name="Camera2D" type="Camera2D" parent="Player" unique_id=601290605]
 zoom = Vector2(1.745, 1.745)

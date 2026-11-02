@@ -4,13 +4,14 @@ extends CharacterBody2D
 @onready var animated_sprite_2d: AnimatedSprite2D = $rotater/AnimatedSprite2D
 @onready var sfx: audioContainerNode = $SFX
 @onready var rotater: Node2D = $rotater
+@onready var flipper: Node2D = $flipper
 
-const MAX_SPEED = 1000.0
+const MAX_SPEED = 500.0
 
-const HILL_SLIDE_SPEED = 700.0
-const FLAT_SLIDE_SPEED = 350.0
-const RUN_SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const HILL_SLIDE_SPEED = 350.0
+const FLAT_SLIDE_SPEED = 120.0
+const RUN_SPEED = 150.0
+const JUMP_VELOCITY = -200
 
 const ACCELERATION_MODIFIER:float = .05
 const SLIDE_ACEL_MOD:float = 0.01
@@ -18,13 +19,14 @@ const SLIDE_SLOW_MODIFIER:float = 0.0001
 const WALL_SLIDE_SPEED_MULT:float = 1
 const AIR_SLIDE_ANGLE_MIN_SPEED = 100
 
+const MIN_SLIDE_SPEED = 130.0
 const CROUCH_HEIGHT:int = 15
 const C_BOX_HEIGHT:int = 33
 const BASE_C_BOX_OFFSET:float = 0.0
 
-const WALLJUMP_SPEED:Vector2 = Vector2(600, -400)
-const WALL_SLIDE_JUMP_SPEED:Vector2 = Vector2(500, 400)
-const WALL_FALL_SPEED:float = 100
+const WALLJUMP_SPEED:Vector2 = Vector2(200, -210)
+const WALL_SLIDE_JUMP_SPEED:Vector2 = Vector2(120, 100)
+const WALL_FALL_SPEED:float = 25
 const WALL_GRACE_PERIOD:int = 7
 
 const VELOCITY_FRAMES_STORED:int = 3
@@ -66,11 +68,14 @@ func _physics_process(delta: float) -> void:
 		match playerState:
 			States.WALLSLIDE:
 				if hitWall[0]:
+					
+					wallSlideDirection = Vector2(get_wall_normal().x , getDirection(lastVelocity).y)
+					
 					if !hitWall[1]: 
 						velocity.y =  wallSlideDirection.y * abs(lastVelocity.x) * WALL_SLIDE_SPEED_MULT
 						print("Last x Velocity: " + str(lastVelocity.x) + ", NEW y velocity: " + str(velocity.y))
 					
-					wallSlideDirection = Vector2(get_wall_normal().x , getDirection(lastVelocity).y)
+					
 					
 					rotation_degrees = 90 * wallSlideDirection.x
 					
@@ -80,7 +85,7 @@ func _physics_process(delta: float) -> void:
 				direction = wallSlideDirection.x * wallSlideDirection.y
 				if velocity.y > 0: velocity += get_gravity() * delta * baseGravityMult
 				animated_sprite_2d.play("SLIDE")
-				
+				slidOffWall = true
 				if Input.is_action_just_pressed("JUMP"): 
 					velocity = Vector2(WALL_SLIDE_JUMP_SPEED.x * wallSlideDirection.x, WALL_SLIDE_JUMP_SPEED.y * velocityDirection.y)
 					slidOffWall = false
@@ -174,7 +179,7 @@ func _physics_process(delta: float) -> void:
 	lastVelocity = velocity
 	
 	playPlayerSounds()
-	apply_floor_snap()
+	if !is_on_wall(): apply_floor_snap()
 	move_and_slide()
 	#print(velocity)
 #resets all player values to their base
@@ -225,8 +230,8 @@ func movementState(resetOnChange := true):
 	
 	if resetOnChange && playerState != state: 
 		#print("state is:" + str(STATE_NAMES[state] + ", last state is: " + str(STATE_NAMES[playerState])))
-		if state == States.SLIDE && playerState == States.WALLSLIDE:
-			wallSlideToFall()
+		
+		
 		reset()
 	# warning large print statement for testing
 	#print("on wall:" + str(is_on_wall()) + ", fake on wall:" + str(is_on_ceiling() && get_wall_normal()) + ", combo bool statement: " + str((is_on_wall() || (is_on_ceiling() && get_wall_normal())) && -get_wall_normal().x == direction))
@@ -246,11 +251,7 @@ func changeHitBox(height:int):
 		collision.shape.height = height
 
 #turns the player around a corner when they are sliding on a wall
-func wallSlideToFall():
-	for i in 4:
-		await get_tree().process_frame
-	velocity = Vector2(abs(velocity.y) * -wallSlideDirection.x, 0)
-	print("boosted")
+
 
 func getDirection(value:Vector2):
 	var vectorDirection = Vector2.ZERO
